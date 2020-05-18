@@ -1,0 +1,17 @@
+1.1
+108
+0.8
+2.5
+0.0005
+1000
+1
+1
+
+  ReadInput >> temp;
+  ReadInput >> npart;
+  ReadInput >> rho;
+  ReadInput >> rcut;
+  ReadInput >> delta;
+  ReadInput >> nstep;
+  ReadInput >> restart;
+  ReadInput >> printall

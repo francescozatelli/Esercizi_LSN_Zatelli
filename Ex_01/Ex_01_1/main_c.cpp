@@ -6,20 +6,24 @@
 #include "functions.h"
 
 using namespace std;
- 
+
 int main (int argc, char *argv[]){
 
 	Random rnd;
 	initRandom(rnd); //Sposto dal main l'inizializzazione del generatore (seed ecc.)
-	
+
 	int M=100; //Numero di sottointervalli
 	int n=10000; //Numero di lanci
 	int n_repetitions=100; //Quante volte calcolo il chi-quadro
-	
+
 	vector<double> chi(n_repetitions);
 	vector<double> extracted_numbers(n);
-	
-	
+
+	cout<<"Chi-square test"<<endl;
+	cout<<"Number of sub-intervals in [0,1): "<<M<<endl;
+	cout<<"Extracted numbers for each chi-square calculation: "<<n<<endl;
+	cout<<"Number of chi-square calculated: "<<n_repetitions<<endl;
+
 	for(int j=0; j<n_repetitions; j++){
 		for(int i=0; i<n; i++){
 			//Estraggo gli i-esimi n numeri casuali
@@ -32,19 +36,18 @@ int main (int argc, char *argv[]){
 	rnd.SaveSeed();
 
 
-	
+
 	//Output dei risultati
 	ofstream fileout;
 	fileout.open("out_01_1c.txt");
+	cout<<"Output file: out_01_1c.txt"<<endl;
 	if(fileout.is_open()){
 		fileout<<"j,\tChiSquare"<<endl;
 		for(int j=0; j<n_repetitions; j++){
 			fileout<<j+1<<",\t"<<chi[j]<<endl;
 		}
 	}else cerr<< "Unable to open output file"<<endl;
-	
+
 	fileout.close();
 	return 0;
 }
-
-

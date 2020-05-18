@@ -118,15 +118,6 @@ int main (int argc, char *argv[]){
 	}else cerr<< "Unable to open output file"<<endl;
 	fileout.close();
 
-	fileout.open("out_put_discretized.txt");
-	if(fileout.is_open()){
-		fileout<<"N,\tAverage,\tError"<<endl;
-		for(int i=0; i<N; i++){
-			fileout<<i+1<<",\t"<<put_discretized_avg[i]<<",\t"<<put_discretized_err[i]<<endl;
-		}
-	}else cerr<< "Unable to open output file"<<endl;
-	fileout.close();
-
 	fileout.open("out_call_put_analytic.txt");
 	if(fileout.is_open()){
 		fileout<<"Call - Analytic:"<<endl<<call_analytic<<endl;

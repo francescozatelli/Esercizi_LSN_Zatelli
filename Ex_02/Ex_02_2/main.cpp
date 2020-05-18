@@ -35,6 +35,14 @@ int main (int argc, char *argv[]){
 	RandomWalk<int> rw_discrete(rnd,a_discrete);
 	RandomWalk<double> rw_continuous(rnd,a_continuous);
 
+	cout<<"Random walks"<<endl;
+	cout<<"Number of random walks: "<<M<<endl;
+	cout<<"Number of blocks: "<<N<<endl;
+	cout<<"Number of random walks per block: "<<L<<endl;
+	cout<<"Number of steps for each random walk: "<<nsteps<<endl;
+	cout<<"Space step for discrete random walk a = "<<a_discrete<<endl;
+	cout<<"Space step for continuous random walk a = "<<a_continuous<<endl;
+
 
 	/*Questa parte di codice è un po' contorta ma serve per evitare di creare M vettori contenenti nsteps elementi.
 	*	Praticamente determino i valori dei singoli blocchi a mano a mano che simulo gli M random walks.
@@ -88,6 +96,7 @@ int main (int argc, char *argv[]){
 	//Output dei risultati
 	ofstream fileout;
 	fileout.open("out_discr.txt");
+	cout<<"Output file for discrete random walk: out_discr.txt"<<endl;
 	if(fileout.is_open()){
 		fileout<<"N,\tAverage,\tError"<<endl;
 		fileout<<"0,\t0,\t0"<<endl; //Il primo step lo metto manualmente in quanto banale
@@ -99,6 +108,7 @@ int main (int argc, char *argv[]){
 	fileout.close();
 
 	fileout.open("out_cont.txt");
+	cout<<"Output file for continuous random walk: out_cont.txt"<<endl;
 	if(fileout.is_open()){
 		fileout<<"N,\tAverage,\tError"<<endl;
 		fileout<<"0,\t0,\t0"<<endl; //Il primo step lo metto manualmente in quanto banale

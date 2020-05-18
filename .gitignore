@@ -1,3 +1,12 @@
 .DS_Store
 .ipynb_checkpoints
+.vscode
 Parallel Random Number Generator/
+ISING_1D/
+MonteCarlo_NVT/
+Ex_04/Ex_04_1/frames/
+Ex_04/Ex_04_1/Gas/frames/
+Ex_04/Ex_04_1/Liquid/frames/
+Ex_04/Ex_04_1/Solid/frames/
+Ex_04/Ex_04_2/frames/
+Ex_07/Ex_07_1/frames/*
