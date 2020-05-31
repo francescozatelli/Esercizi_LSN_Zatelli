@@ -1,0 +1,25 @@
+1
+0.75
+0.75
+0.05
+0.05
+0
+10
+200
+100
+100000
+1000
+
+    ReadInput>>mu0;
+    ReadInput>>sigma0;
+    ReadInput>>samplingmove_width;
+    ReadInput>>sigmamove_width;
+    ReadInput>>mumove_width;
+    ReadInput>>beta0;
+    ReadInput>>beta_step;
+    ReadInput>>nsteps_beta;
+    ReadInput>>nsteps_musigma;
+    ReadInput>>nsteps_sampling;
+    ReadInput>>block_size;
+
+(Input for simulated annealing)
