@@ -1,0 +1,23 @@
+1.2
+108
+0.05
+5.0
+3.5
+50
+2000
+0
+0
+200
+200
+
+  ReadInput >> temp;
+  ReadInput >> npart;
+  ReadInput >> rho;
+  ReadInput >> rcut;
+  ReadInput >> delta;
+  ReadInput >> nblk;
+  ReadInput >> nstep;
+  ReadInput >> m_restart; //1 to restart from old config, 0 otherwise
+  ReadInput >> m_printall; //1 to print every value of U and M calculated, 0 otherwise
+  ReadInput >> m_eq_nstep; //Number of step for equilibration
+  ReadInput >> m_nbins; //Number of bins for g(r) histogram

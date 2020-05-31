@@ -10,10 +10,10 @@ using namespace std;
 
 int main (int argc, char *argv[]){
 
-	double M_eq=1000; //Number of throws to test equilibrium
-	double M = 1E6; //Number of throws
-	double L = 10000; //Block size
-	double N=M/L; //Number of blocks
+	int M_eq=1000; //Number of throws to test equilibrium
+	int M = 1E6; //Number of throws
+	int L = 10000; //Block size
+	int N=M/L; //Number of blocks
 
 	vector<double> r100_throws(M); //single throw
 	vector<double> r210_throws(M);
