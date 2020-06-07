@@ -6,25 +6,6 @@ double Annealer :: BoltzmannWeight(double beta, double energy){
     return exp(-beta*energy);
 }
 
-double Annealer :: sampleAndCalculateEnergy(double mu, double sigma){
-  ProbabilityDistribution p(mu,sigma); //Initialize functions of interest with the new values for mu and sigma
-  LogarithmicDerivativeP dlogp(mu,sigma);
-  LocalEnergy eloc(mu,sigma);
-
-  Metropolis metro(mu, &p, &dlogp, m_rnd); //mu as starting point
-
-  double energy_new_avg = 0;
-  for(int i=0; i<m_metrosteps;i++){
-    metro.StepSmart(m_metrowidth);
-		//metro.StepUnif(m_metrowidth);
-		double energy=eloc.Eval(metro.getX());
-		//m_energies_new[i]=energy; //save the new energies in order to use them for data blocking if needed
-    energy_new_avg=i/double(i+1)*energy_new_avg+1./double(i+1)*energy; //Average on the fly
-	}
-  cout<<"Acceptance rate: "<<metro.getAcceptanceRate()<<endl;
-  return energy_new_avg;
-}
-
 double Annealer :: CalculateEnergy(double mu, double sigma){
   ProbabilityDistribution p(mu,sigma); //Initialize functions of interest with the new values for mu and sigma
   LocalEnergy eloc(mu,sigma);

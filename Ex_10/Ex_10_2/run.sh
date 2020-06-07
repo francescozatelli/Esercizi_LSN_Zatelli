@@ -1,0 +1,1 @@
+mpiexec --oversubscribe -np 2 main

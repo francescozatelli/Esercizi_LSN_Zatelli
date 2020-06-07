@@ -1,0 +1,19 @@
+0
+10
+256
+100
+3
+0.6
+0.05
+10000
+500
+
+  ReadInput >> is_cycle; //1 for random towns on cycle, 0 for random towns in square
+  ReadInput >> edge; //radius for the cycle, edge for the square
+  ReadInput >> ntowns;
+  ReadInput >> population_size;
+  ReadInput >> selection_parameter;
+  ReadInput >> crossover_probability;
+  ReadInput >> mutation_probability;
+  ReadInput >> ngenerations;
+  ReadInput >> nmigration;

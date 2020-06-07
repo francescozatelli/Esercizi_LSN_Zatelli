@@ -1,0 +1,15 @@
+0
+10
+32
+0.005
+1.1
+200
+10000
+
+  ReadInput >> is_cycle; //1 for random towns on cycle, 0 for random towns in square
+  ReadInput >> edge; //radius for the cycle, edge for the square
+  ReadInput >> ntowns;
+  ReadInput>>beta0;
+  ReadInput>>beta_coeff;
+  ReadInput>>nsteps_beta;
+  ReadInput>>ntrials_per_beta;

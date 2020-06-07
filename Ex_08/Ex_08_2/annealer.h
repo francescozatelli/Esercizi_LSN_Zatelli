@@ -36,7 +36,6 @@ private:
   
   void samplePath(double mu, double sigma); //sample p_{mu,sigma}(x)
   double CalculateEnergy(double mu, double sigma); //compute the energy with the sampled path and reweighting
-  double sampleAndCalculateEnergy(double mu, double sigma); //samples and computes the energy (no reweighting, slow)
 
 public:
   Annealer(double mu0, double sigma0, double metrowidth, int metrosteps, Random *rnd);
@@ -46,7 +45,6 @@ public:
   tuple<double, double> dataBlockingEnergy(int block_size); //returns average and error of last accepted metropolis step using m_energies and m_weights
   double getMu() const{return m_mu;};
   double getSigma() const{return m_sigma;};
-  double getEnergyTemp() const{return m_energy;};
   double getAcceptance() const{return m_accepted/double(m_attempted);};
 };
 
