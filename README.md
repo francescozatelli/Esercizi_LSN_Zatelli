@@ -1,4 +1,4 @@
-### Esercizi LSN
+# Esercizi LSN
 Francesco Zatelli, 907321
 francesco.zatelli@studenti.unimi.it
 
